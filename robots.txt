@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://TU-DOMINIO.pe/sitemap.xml
+Sitemap: https://northeconsultora.com/sitemap.xml
