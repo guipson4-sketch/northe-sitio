@@ -262,6 +262,32 @@ p { margin: 0; }
 @keyframes tick { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
 
+/* Eje del norte */
+.axis-sec { padding-block: clamp(40px, 6vw, 72px) clamp(48px, 7vw, 88px); }
+.axis-sec h2 { margin-bottom: 8px; color: var(--muted); font-weight: 400; }
+.axis { position: relative; height: 230px; margin-top: 8px; }
+.axis .line { position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: var(--ink); transform-origin: left; transform: scaleX(0); transition: transform 1.6s var(--ease); }
+.axis .tick { position: absolute; top: 50%; left: var(--x); width: 2px; height: 10px; margin-top: -5px; background: var(--ink); opacity: .45; }
+.axis .pt { position: absolute; top: 50%; left: var(--x); width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: var(--banana); border: 2px solid var(--ink); scale: 0; transition: scale .5s var(--ease); transition-delay: calc(.3s + var(--i) * .25s); }
+.axis .pt.base { width: 26px; height: 26px; margin: -13px 0 0 -13px; }
+.axis .lbl { position: absolute; left: var(--x); transform: translateX(-50%); text-align: center; white-space: nowrap; opacity: 0; transition: opacity .6s; transition-delay: calc(.5s + var(--i) * .25s); }
+.axis .lbl.l { transform: none; text-align: left; left: 0; }
+.axis .lbl.r { transform: translateX(-100%); text-align: right; left: 100%; }
+.axis .lbl.up { bottom: calc(50% + 26px); }
+.axis .lbl.down { top: calc(50% + 26px); }
+.axis .lbl b { display: block; font-family: var(--display); font-stretch: 80%; font-weight: 800; font-size: 1.3rem; line-height: 1.1; }
+.axis .lbl span { color: var(--muted); }
+.axis .lbl em { display: inline-block; margin-left: 6px; padding: 0 6px; background: var(--banana); color: var(--on-banana); font-style: normal; border-radius: 2px; }
+.axis.in .line { transform: none; }
+.axis.in .pt { scale: 1; }
+.axis.in .lbl { opacity: 1; }
+html:not(.js) .axis .line { transform: none; }
+html:not(.js) .axis .pt { scale: 1; }
+html:not(.js) .axis .lbl { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .axis .line, .axis .pt, .axis .lbl { transition: none; } }
+.axis-cap { margin-top: 6px; color: var(--muted); }
+@media (max-width: 560px) { .axis .lbl b { font-size: 1.05rem; } .axis .lbl { font-size: 11px; } }
+
 /* Secciones */
 section.sec { padding-block: clamp(56px, 9vw, 120px); border-top: 1px solid var(--line); }
 section.sec.inv { background: var(--inv-bg); color: var(--inv-fg); border-top: 0; }
@@ -473,6 +499,27 @@ footer.foot { border-top: 2px solid var(--ink); padding-block: 48px 28px; }
   </div>
 
   <div class="ticker" id="ticker" aria-hidden="true"><div class="ticker-track mono" id="ticker-track"></div></div>
+
+  <section class="axis-sec" aria-labelledby="axis-t">
+    <div class="wrap">
+      <h2 class="mono" id="axis-t">Plazas que atendemos, de Tumbes a Trujillo</h2>
+      <div class="axis" id="axis" data-axis>
+        <div class="line" aria-hidden="true"></div>
+        <i class="tick" style="--x:10.4%" aria-hidden="true"></i><i class="tick" style="--x:31.25%" aria-hidden="true"></i><i class="tick" style="--x:52.1%" aria-hidden="true"></i><i class="tick" style="--x:72.9%" aria-hidden="true"></i><i class="tick" style="--x:93.75%" aria-hidden="true"></i>
+        <span class="pt" style="--x:1.4%;--i:0"></span>
+        <div class="lbl l up mono-wrap" style="--i:0"><b>Tumbes</b><span class="mono">3°34′ S</span></div>
+        <span class="pt" style="--x:29.25%;--i:1"></span>
+        <div class="lbl up" style="--x:29.25%;--i:1"><b>Sullana</b><span class="mono">4°54′ S</span></div>
+        <span class="pt base" style="--x:35.3%;--i:2"></span>
+        <div class="lbl down" style="--x:35.3%;--i:2"><b>Piura</b><span class="mono">5°12′ S</span><em class="mono">Base</em></div>
+        <span class="pt" style="--x:68.1%;--i:3"></span>
+        <div class="lbl up" style="--x:68.1%;--i:3"><b>Chiclayo</b><span class="mono">6°46′ S</span></div>
+        <span class="pt" style="--x:96.1%;--i:4"></span>
+        <div class="lbl r down" style="--i:4"><b>Trujillo</b><span class="mono">8°07′ S</span></div>
+      </div>
+      <p class="axis-cap mono">Esquema por latitud sur. Cada marca es un grado. No está a escala geográfica.</p>
+    </div>
+  </section>
 
   <section class="sec" id="obvio">
     <div class="wrap">
@@ -876,7 +923,7 @@ footer.foot { border-top: 2px solid var(--ink); padding-block: 48px 28px; }
   var rvEls = $$("[data-rv]");
   rvEls.forEach(function (el) { el.classList.add("rv"); });
   watch(rvEls, function (el) { el.classList.add("in"); });
-  watch($$(".rail"), function (el) { el.classList.add("in"); });
+  watch($$(".rail, [data-axis]"), function (el) { el.classList.add("in"); });
 
   /* Cifras */
   watch($$("[data-count]"), function (el) { countTo(el, parseInt(el.getAttribute("data-count"), 10), 1100); }, { threshold: 0.6 });
