@@ -436,7 +436,7 @@ fieldset legend { padding: 0; margin-bottom: 8px; font-weight: 600; line-height:
 
 /* Pie */
 footer.foot { border-top: 2px solid var(--ink); padding-block: 48px 28px; }
-.foot-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 32px; }
+.foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; }
 .foot-grid > * { min-width: 0; }
 .foot .brand { font-size: 24px; }
 .foot p { color: var(--muted); }
@@ -445,7 +445,9 @@ footer.foot { border-top: 2px solid var(--ink); padding-block: 48px 28px; }
 .foot .col a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .foot .col span { overflow-wrap: anywhere; }
 .foot-base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); }
-@media (max-width: 720px) { .foot-grid { grid-template-columns: 1fr; } }
+@media (max-width: 960px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .foot-grid { grid-template-columns: 1fr; } }
+.rubros.posts .rubro h3 { font-size: 1.35rem; line-height: 1.15; }
 
 /* Aparición al desplazarse */
 .js .rv { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); transition-delay: var(--d, 0s); }
@@ -468,6 +470,7 @@ footer.foot { border-top: 2px solid var(--ink); padding-block: 48px 28px; }
       <a class="link mono" href="#rubros">Rubros</a>
       <a class="link mono" href="#auditorias">Auditorías</a>
       <a class="link mono" href="#preguntas">Preguntas</a>
+      <a class="link mono" href="/blog/">Blog</a>
       <a class="btn small" href="#auditoria-expres">Auditoría exprés</a>
     </nav>
     <div class="ctrl">
@@ -768,10 +771,49 @@ footer.foot { border-top: 2px solid var(--ink); padding-block: 48px 28px; }
     </div>
   </section>
 
+  <!-- blog:start -->
+  <section class="sec" id="blog">
+    <div class="wrap">
+      <div class="sec-head" data-rv>
+        <span class="mono">05 · Blog</span>
+        <h2>Notas sobre SEO, GEO e inteligencia artificial para el norte.</h2>
+        <p>Guías prácticas para aparecer en Google y en las respuestas de la IA.</p>
+      </div>
+      <div class="rubros posts" data-stagger>
+        <div class="rubro">
+          <span class="mono cat">SEO · 3 min de lectura</span>
+          <h3>SEO local en Piura: cómo aparecer cuando alguien busca lo que vendes</h3>
+          <p>Guía práctica de SEO local para negocios de Piura y el norte del Perú: ficha de Google, reseñas, páginas por servicio y contenido con acento local.</p>
+          <div class="go-row"><a class="go" href="/blog/seo-local-piura/">Leer artículo →</a></div>
+        </div>
+        <div class="rubro">
+          <span class="mono cat">GEO · 4 min de lectura</span>
+          <h3>GEO: cómo lograr que ChatGPT, Gemini y Perplexity recomienden tu negocio</h3>
+          <p>Qué es el GEO (Generative Engine Optimization), en qué se diferencia del SEO y cómo preparar tu negocio para aparecer en las respuestas de ChatGPT, Gemini y Google.</p>
+          <div class="go-row"><a class="go" href="/blog/geo-que-es-y-por-que-importa/">Leer artículo →</a></div>
+        </div>
+        <div class="rubro">
+          <span class="mono cat">Inteligencia artificial · 3 min de lectura</span>
+          <h3>Inteligencia artificial en el marketing: por qué importa y cómo usarla sin perder la voz de tu marca</h3>
+          <p>Por qué la inteligencia artificial ya es parte del marketing, qué tareas conviene delegarle y qué decisiones deben seguir siendo humanas.</p>
+          <div class="go-row"><a class="go" href="/blog/inteligencia-artificial-en-el-marketing/">Leer artículo →</a></div>
+        </div>
+        <div class="rubro">
+          <span class="mono cat">SEO y GEO · 3 min de lectura</span>
+          <h3>Checklist: 12 puntos para que tu web sea entendible por Google y por la IA</h3>
+          <p>Lista de verificación práctica para revisar si la web de tu negocio está lista para buscadores y asistentes de IA: técnica, contenido y confianza.</p>
+          <div class="go-row"><a class="go" href="/blog/checklist-web-para-google-y-la-ia/">Leer artículo →</a></div>
+        </div>
+      </div>
+      <p class="fine" style="margin-top:28px"><a href="/blog/" class="mono" style="text-decoration-color:var(--banana);text-decoration-thickness:3px;text-underline-offset:6px">Ver todos los artículos →</a></p>
+    </div>
+  </section>
+  <!-- blog:end -->
+
   <section class="sec" id="preguntas">
     <div class="wrap">
       <div class="sec-head" data-rv>
-        <span class="mono">05 · Preguntas frecuentes</span>
+        <span class="mono">06 · Preguntas frecuentes</span>
         <h2>Precios y alcance de las auditorías.</h2>
       </div>
       <div class="faq" data-rv>
@@ -826,6 +868,14 @@ footer.foot { border-top: 2px solid var(--ink); padding-block: 48px 28px; }
         <a href="/salud-y-estetica/">Salud y estética</a>
         <a href="/inmobiliario-y-construccion/">Inmobiliario y construcción</a>
         <a href="/campanas-y-comunicacion-institucional/">Campañas e institucional</a>
+      </nav>
+      <nav class="col" aria-label="Blog">
+        <span class="mono muted">Blog</span>
+        <a href="/blog/">Todos los artículos</a>
+        <a href="/blog/seo-local-piura/">SEO local en Piura</a>
+        <a href="/blog/geo-que-es-y-por-que-importa/">Qué es el GEO</a>
+        <a href="/blog/inteligencia-artificial-en-el-marketing/">IA en el marketing</a>
+        <a href="/blog/checklist-web-para-google-y-la-ia/">Checklist SEO y GEO</a>
       </nav>
       <div class="col">
         <span class="mono muted">Contacto</span>
