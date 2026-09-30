@@ -34,6 +34,11 @@
   "email": "northepe@gmail.com",
   "logo": "https://northeconsultora.com/northe-logo.svg",
   "image": "https://northeconsultora.com/og-northe.png",
+  "sameAs": [
+    "https://www.linkedin.com/in/northe-17bbba3b1/",
+    "https://www.instagram.com/northeconsultoria/",
+    "https://www.facebook.com/profile.php?id=61590391678882"
+  ],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Piura",
@@ -348,7 +353,8 @@ html:not(.js) .rail i { transform: none; }
 .rubro h3 { font-size: 1.7rem; font-weight: 800; }
 .rubro .q { font-family: var(--display); font-stretch: 90%; font-weight: 600; font-size: 1.1rem; line-height: 1.25; }
 .rubro p { color: var(--muted); }
-.rubro .go { align-self: flex-start; margin-top: auto; padding-top: 10px; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; text-decoration: underline; text-decoration-color: var(--banana); text-decoration-thickness: 3px; text-underline-offset: 6px; }
+.rubro .go { align-self: flex-start; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; text-decoration: underline; text-decoration-color: var(--banana); text-decoration-thickness: 3px; text-underline-offset: 6px; }
+.rubro .go-row { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: auto; padding-top: 10px; }
 @media (max-width: 720px) { .rubros { grid-template-columns: 1fr; } }
 
 /* Herramienta */
@@ -628,28 +634,28 @@ footer.foot { border-top: 2px solid var(--ink); padding-block: 48px 28px; }
           <h3>Gastronomía</h3>
           <p class="q">¿Tu plato estrella sostiene la marca?</p>
           <p>Si el nombre, el plato estrella y el tono cuentan la misma historia, y si la cocina resiste un pico de pedidos.</p>
-          <a class="go" href="#auditoria-expres" data-rubro="Gastronomía">Auditar mi negocio →</a>
+          <div class="go-row"><a class="go" href="/gastronomia/">Ver el rubro →</a><a class="go" href="#auditoria-expres" data-rubro="Gastronomía">Auditar mi negocio →</a></div>
         </div>
         <div class="rubro">
           <span class="mono">Rubro 02</span>
           <h3>Salud y estética</h3>
           <p class="q">¿Qué puedes prometer sin exagerar?</p>
           <p>Qué promesa puede hacer la marca sin exagerar y cómo se percibe la atención antes de que el paciente llegue a la cita.</p>
-          <a class="go" href="#auditoria-expres" data-rubro="Salud y estética">Auditar mi negocio →</a>
+          <div class="go-row"><a class="go" href="/salud-y-estetica/">Ver el rubro →</a><a class="go" href="#auditoria-expres" data-rubro="Salud y estética">Auditar mi negocio →</a></div>
         </div>
         <div class="rubro">
           <span class="mono">Rubro 03</span>
           <h3>Inmobiliario y construcción</h3>
           <p class="q">¿Quién responde cuando preguntan por el proyecto?</p>
           <p>Ticket alto y ciclo largo: cómo se presenta el proyecto, quién responde las consultas y en cuánto tiempo.</p>
-          <a class="go" href="#auditoria-expres" data-rubro="Inmobiliario y construcción">Auditar mi negocio →</a>
+          <div class="go-row"><a class="go" href="/inmobiliario-y-construccion/">Ver el rubro →</a><a class="go" href="#auditoria-expres" data-rubro="Inmobiliario y construcción">Auditar mi negocio →</a></div>
         </div>
         <div class="rubro">
           <span class="mono">Rubro 04</span>
           <h3>Campañas y comunicación institucional</h3>
           <p class="q">¿Tu mensaje pisa territorio propio?</p>
           <p>Mensaje, territorio y coherencia de la marca, dentro del marco de la normativa electoral y de publicidad.</p>
-          <a class="go" href="#auditoria-expres" data-rubro="Campañas y comunicación institucional">Auditar mi negocio →</a>
+          <div class="go-row"><a class="go" href="/campanas-y-comunicacion-institucional/">Ver el rubro →</a><a class="go" href="#auditoria-expres" data-rubro="Campañas y comunicación institucional">Auditar mi negocio →</a></div>
         </div>
       </div>
     </div>
@@ -810,22 +816,25 @@ footer.foot { border-top: 2px solid var(--ink); padding-block: 48px 28px; }
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="#inicio" aria-label="NORTHE, inicio"><svg class="logo" viewBox="0 0 1727 732" role="img" aria-label="NORTHE"><use href="#northe-logo"/></svg></a>
+        <a class="brand" href="/" aria-label="NORTHE, inicio"><svg class="logo" viewBox="0 0 1727 732" role="img" aria-label="NORTHE"><use href="#northe-logo"/></svg></a>
         <p class="mono" style="margin-top:16px">Marcas que piensan. Negocios que escalan.</p>
         <p style="margin-top:10px; max-width:28em">Consultora de marca y marketing digital con base en Piura, para negocios del norte del Perú.</p>
       </div>
-      <nav class="col" aria-label="Secciones">
-        <span class="mono muted">Secciones</span>
-        <a href="#obvio">Qué auditamos</a>
-        <a href="#metodo">Método</a>
-        <a href="#rubros">Rubros</a>
-        <a href="#auditorias">Auditorías</a>
-        <a href="#preguntas">Preguntas</a>
+      <nav class="col" aria-label="Rubros">
+        <span class="mono muted">Rubros</span>
+        <a href="/gastronomia/">Gastronomía</a>
+        <a href="/salud-y-estetica/">Salud y estética</a>
+        <a href="/inmobiliario-y-construccion/">Inmobiliario y construcción</a>
+        <a href="/campanas-y-comunicacion-institucional/">Campañas e institucional</a>
       </nav>
       <div class="col">
         <span class="mono muted">Contacto</span>
         <a href="mailto:northepe@gmail.com">northepe@gmail.com</a>
         <span class="muted">Piura, Perú</span>
+        <span class="mono muted" style="margin-top:12px">Redes</span>
+        <a href="https://www.linkedin.com/in/northe-17bbba3b1/" target="_blank" rel="me noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/northeconsultoria/" target="_blank" rel="me noopener">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61590391678882" target="_blank" rel="me noopener">Facebook</a>
       </div>
     </div>
     <div class="foot-base mono"><span>© 2026 NORTHE Consultora</span><span>Precios en soles, sin IGV</span></div>
@@ -993,6 +1002,15 @@ footer.foot { border-top: 2px solid var(--ink); padding-block: 48px 28px; }
   swA.addEventListener("click", function () { touched = true; setMode(false); });
   swB.addEventListener("click", function () { touched = true; setMode(true); });
   watch([cmp], function () { if (!reduce) setTimeout(function () { if (!touched) setMode(true); }, 1800); }, { threshold: 0.5 });
+
+  /* Rubro desde la URL (?rubro=...) */
+  try {
+    var qr = new URLSearchParams(location.search).get("rubro");
+    if (qr) {
+      var sel = $("#rubro");
+      Array.prototype.forEach.call(sel.options, function (o) { if (o.value === qr) sel.value = qr; });
+    }
+  } catch (e) {}
 
   /* Rubro preseleccionado */
   $$("a[data-rubro]").forEach(function (a) {
