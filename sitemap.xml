@@ -3,5 +3,26 @@
   <url>
     <loc>https://northeconsultora.com/</loc>
     <lastmod>2026-09-30</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://northeconsultora.com/gastronomia/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://northeconsultora.com/salud-y-estetica/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://northeconsultora.com/inmobiliario-y-construccion/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://northeconsultora.com/campanas-y-comunicacion-institucional/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>
