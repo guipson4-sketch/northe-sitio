@@ -837,6 +837,137 @@ footer.foot { padding-block: 72px 36px; }
     </div>
   </section>
 
+  <section class="sec" id="cotizador">
+    <div class="wrap">
+      <div class="sec-head" data-rv>
+        <span class="mono">Cotizador</span>
+        <h2>Arma tu cotización en tres pasos.</h2>
+        <p>Elige qué necesitas, cuéntanos tu negocio y te abrimos WhatsApp con el mensaje listo. Sin compromiso.</p>
+      </div>
+      <div class="cot" id="cot">
+        <style>
+          .cot{max-width:760px}
+          .cot .cstep[hidden]{display:none}
+          .cot .ctop{display:flex;gap:8px;margin-bottom:22px}
+          .cot .dot{flex:1;height:3px;border-radius:3px;background:#222}
+          .cot .dot.on{background:#8052ff}
+          .cot .opts{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 22px}
+          .cot .opt{display:inline-flex;align-items:center;gap:10px;background:#111;color:#bdbdbd;border-radius:999px;padding:12px 20px;cursor:pointer;font-weight:300}
+          .cot .opt input{position:absolute;opacity:0;pointer-events:none}
+          .cot .opt:has(input:checked){background:#8052ff;color:#fff}
+          .cot .opt:has(input:focus-visible){outline:2px solid #fff}
+          .cot .opt small{opacity:.75}
+          .cot .cact{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+          .cot .cerr{color:#ffb829;min-height:1.4em;margin:6px 0 0}
+          .cot .sum{background:#111;border-radius:24px;padding:20px 24px;margin:14px 0 22px}
+          .cot .sum li{margin:6px 0;font-weight:300}
+        </style>
+        <div class="ctop" aria-hidden="true"><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div>
+
+        <div class="cstep" data-s="1">
+          <h3>1. ¿Qué necesitas?</h3>
+          <p class="muted">Puedes marcar más de uno.</p>
+          <div class="opts" id="c-serv">
+            <label class="opt"><input type="checkbox" value="Auditoría exprés (gratis)"><span>Auditoría exprés <small>S/ 0</small></span></label>
+            <label class="opt"><input type="checkbox" value="Auditoría Esencial"><span>Auditoría Esencial <small>S/ 450 + IGV</small></span></label>
+            <label class="opt"><input type="checkbox" value="Auditoría Completa"><span>Auditoría Completa <small>se cotiza</small></span></label>
+            <label class="opt"><input type="checkbox" value="Acompañamiento mensual"><span>Acompañamiento <small>se cotiza</small></span></label>
+          </div>
+          <p class="cerr" role="alert"></p>
+          <div class="cact"><button type="button" class="btn" data-go="2">Siguiente</button></div>
+        </div>
+
+        <div class="cstep" data-s="2" hidden>
+          <h3>2. Tu negocio</h3>
+          <div class="field"><label for="c-rubro">Rubro</label>
+            <select id="c-rubro"><option>Gastronomía</option><option>Salud y estética</option><option>Inmobiliario y construcción</option><option>Campañas y comunicación institucional</option><option>Otro rubro</option></select></div>
+          <p class="muted" style="margin-top:14px">¿Ya tienes página web?</p>
+          <div class="opts" id="c-web">
+            <label class="opt"><input type="radio" name="c-web" value="Sí tengo web" checked><span>Sí</span></label>
+            <label class="opt"><input type="radio" name="c-web" value="Aún no tengo web"><span>No todavía</span></label>
+          </div>
+          <p class="muted">¿Qué canal te preocupa más?</p>
+          <div class="opts" id="c-canal">
+            <label class="opt"><input type="radio" name="c-canal" value="Google y búsquedas" checked><span>Google</span></label>
+            <label class="opt"><input type="radio" name="c-canal" value="Redes sociales"><span>Redes sociales</span></label>
+            <label class="opt"><input type="radio" name="c-canal" value="Aparecer en respuestas de IA"><span>Respuestas de IA</span></label>
+            <label class="opt"><input type="radio" name="c-canal" value="No lo sé"><span>No lo sé</span></label>
+          </div>
+          <div class="cact"><button type="button" class="btn ghost" data-go="1">Atrás</button><button type="button" class="btn" data-go="3">Siguiente</button></div>
+        </div>
+
+        <div class="cstep" data-s="3" hidden>
+          <h3>3. Revisa y envía</h3>
+          <div class="field"><label for="c-nombre">Nombre de tu negocio (opcional)</label>
+            <input type="text" id="c-nombre" autocomplete="organization" placeholder="Tu nombre comercial"></div>
+          <div class="sum"><ul id="c-sum"></ul></div>
+          <p class="note" id="c-precio"></p>
+          <div class="cact">
+            <button type="button" class="btn ghost" data-go="2">Atrás</button>
+            <a class="btn" id="c-wa" href="https://wa.me/51960190963" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+            <a class="btn ghost" id="c-mail" href="mailto:northepe@gmail.com">Enviar por correo</a>
+          </div>
+          <p class="fine">Precios en soles, sin IGV (+18%). Lo que se cotiza se confirma por escrito antes de empezar. El mensaje solo se envía si tú lo envías.</p>
+        </div>
+      </div>
+    </div>
+    <script>
+    (function () {
+      var root = document.getElementById("cot");
+      if (!root) return;
+      var steps = root.querySelectorAll(".cstep"), dots = root.querySelectorAll(".dot");
+      function show(n) {
+        steps.forEach(function (el) { el.hidden = el.getAttribute("data-s") !== String(n); });
+        dots.forEach(function (d, i) { d.classList.toggle("on", i < n); });
+        if (n === 3) summary();
+      }
+      function picked() {
+        return Array.prototype.map.call(root.querySelectorAll("#c-serv input:checked"), function (i) { return i.value; });
+      }
+      function val(name) { var e = root.querySelector('input[name="' + name + '"]:checked'); return e ? e.value : ""; }
+      function msg() {
+        var nombre = document.getElementById("c-nombre").value.trim();
+        return "Hola, quiero cotizar con NORTHE.\nNegocio: " + (nombre || "(sin nombre aún)") +
+          "\nRubro: " + document.getElementById("c-rubro").value +
+          "\nServicios: " + picked().join(", ") +
+          "\nWeb: " + val("c-web") + "\nCanal que más me preocupa: " + val("c-canal");
+      }
+      function summary() {
+        var ul = document.getElementById("c-sum"), list = picked();
+        ul.innerHTML = "";
+        list.concat(["Rubro: " + document.getElementById("c-rubro").value, val("c-web"), "Canal: " + val("c-canal")]).forEach(function (t) {
+          var li = document.createElement("li"); li.textContent = t; ul.appendChild(li);
+        });
+        var p = [];
+        if (list.indexOf("Auditoría Esencial") > -1) p.push("Auditoría Esencial: S/ 450 + IGV (precio de lanzamiento para los primeros 5 clientes; luego S/ 600 + IGV).");
+        if (list.indexOf("Auditoría exprés (gratis)") > -1) p.push("Auditoría exprés: S/ 0.");
+        if (list.indexOf("Auditoría Completa") > -1 || list.indexOf("Acompañamiento mensual") > -1) p.push("Completa y Acompañamiento se cotizan según el tamaño del negocio.");
+        document.getElementById("c-precio").textContent = p.join(" ");
+        update();
+      }
+      function update() {
+        var m = msg();
+        document.getElementById("c-wa").href = "https://wa.me/51960190963?text=" + encodeURIComponent(m);
+        document.getElementById("c-mail").href = "mailto:northepe@gmail.com?subject=" + encodeURIComponent("Cotización NORTHE") + "&body=" + encodeURIComponent(m);
+      }
+      root.addEventListener("input", function () { if (!root.querySelector('[data-s="3"]').hidden) { update(); } });
+      root.addEventListener("click", function (e) {
+        var b = e.target.closest("[data-go]");
+        if (b) {
+          var go = Number(b.getAttribute("data-go"));
+          if (go > 1 && picked().length === 0) { root.querySelector(".cerr").textContent = "Elige al menos una opción para continuar."; show(1); return; }
+          root.querySelector(".cerr").textContent = "";
+          show(go);
+          if (go === 3 && window.northeTrack) window.northeTrack("cotizador_paso3", { pagina: location.pathname });
+          return;
+        }
+        if (e.target.closest("#c-wa") && window.northeTrack) window.northeTrack("cotizacion_enviada", { medio: "whatsapp" });
+        if (e.target.closest("#c-mail") && window.northeTrack) window.northeTrack("cotizacion_enviada", { medio: "correo" });
+      });
+    })();
+    </script>
+  </section>
+
   <!-- blog:start -->
   <section class="sec" id="blog">
     <div class="wrap">
