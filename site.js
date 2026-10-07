@@ -12,15 +12,6 @@
     els.forEach(function (el) { io.observe(el); });
   }
 
-  var themeBtn = $("#theme");
-  themeBtn.addEventListener("click", function () {
-    var cur = doc.getAttribute("data-theme");
-    if (!cur) cur = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    var next = cur === "dark" ? "light" : "dark";
-    doc.setAttribute("data-theme", next);
-    try { localStorage.setItem("northe-theme", next); } catch (e) {}
-  });
-
   var menu = $("#menu"), nav = $("#nav");
   menu.addEventListener("click", function () {
     var open = nav.classList.toggle("open");
