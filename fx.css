@@ -1,0 +1,88 @@
+/* NORTHE · efectos de movimiento. Se desactivan con prefers-reduced-motion. */
+
+/* 1. Crossfade entre páginas y elemento compartido */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  ::view-transition-group(root) { animation-duration: .5s; }
+  ::view-transition-old(root) { animation: fx-out .35s ease both; }
+  ::view-transition-new(root) { animation: fx-in .5s ease both; }
+  @keyframes fx-out { to { opacity: 0; filter: blur(6px); } }
+  @keyframes fx-in { from { opacity: 0; filter: blur(6px); } }
+    .rubro:has(a[href="/gastronomia/"]) h3{view-transition-name:vt-t-gastronomia}
+  html:has(link[rel="canonical"][href$="/gastronomia/"]) main h1{view-transition-name:vt-t-gastronomia;opacity:1!important;filter:none!important;transform:none!important}
+  .rubro:has(a[href="/salud-y-estetica/"]) h3{view-transition-name:vt-t-salud-y-estetica}
+  html:has(link[rel="canonical"][href$="/salud-y-estetica/"]) main h1{view-transition-name:vt-t-salud-y-estetica;opacity:1!important;filter:none!important;transform:none!important}
+  .rubro:has(a[href="/inmobiliario-y-construccion/"]) h3{view-transition-name:vt-t-inmobiliario-y-construccion}
+  html:has(link[rel="canonical"][href$="/inmobiliario-y-construccion/"]) main h1{view-transition-name:vt-t-inmobiliario-y-construccion;opacity:1!important;filter:none!important;transform:none!important}
+  .rubro:has(a[href="/campanas-y-comunicacion-institucional/"]) h3{view-transition-name:vt-t-campanas-y-comunicacion-institucional}
+  html:has(link[rel="canonical"][href$="/campanas-y-comunicacion-institucional/"]) main h1{view-transition-name:vt-t-campanas-y-comunicacion-institucional;opacity:1!important;filter:none!important;transform:none!important}
+  .rubro:has(a[href="/blog/seo-local-piura/"]) h3{view-transition-name:vt-t-seo-local-piura}
+  html:has(link[rel="canonical"][href$="/blog/seo-local-piura/"]) main h1{view-transition-name:vt-t-seo-local-piura;opacity:1!important;filter:none!important;transform:none!important}
+  .rubro:has(a[href="/blog/geo-que-es-y-por-que-importa/"]) h3{view-transition-name:vt-t-geo-que-es-y-por-que-importa}
+  html:has(link[rel="canonical"][href$="/blog/geo-que-es-y-por-que-importa/"]) main h1{view-transition-name:vt-t-geo-que-es-y-por-que-importa;opacity:1!important;filter:none!important;transform:none!important}
+  .rubro:has(a[href="/blog/inteligencia-artificial-en-el-marketing/"]) h3{view-transition-name:vt-t-inteligencia-artificial-en-el-marketing}
+  html:has(link[rel="canonical"][href$="/blog/inteligencia-artificial-en-el-marketing/"]) main h1{view-transition-name:vt-t-inteligencia-artificial-en-el-marketing;opacity:1!important;filter:none!important;transform:none!important}
+  .rubro:has(a[href="/blog/checklist-web-para-google-y-la-ia/"]) h3{view-transition-name:vt-t-checklist-web-para-google-y-la-ia}
+  html:has(link[rel="canonical"][href$="/blog/checklist-web-para-google-y-la-ia/"]) main h1{view-transition-name:vt-t-checklist-web-para-google-y-la-ia;opacity:1!important;filter:none!important;transform:none!important}
+  .rubro:has(a[href="/blog/seo-para-restaurantes-en-piura/"]) h3{view-transition-name:vt-t-seo-para-restaurantes-en-piura}
+  html:has(link[rel="canonical"][href$="/blog/seo-para-restaurantes-en-piura/"]) main h1{view-transition-name:vt-t-seo-para-restaurantes-en-piura;opacity:1!important;filter:none!important;transform:none!important}
+  .rubro:has(a[href="/blog/marketing-para-clinicas-en-piura/"]) h3{view-transition-name:vt-t-marketing-para-clinicas-en-piura}
+  html:has(link[rel="canonical"][href$="/blog/marketing-para-clinicas-en-piura/"]) main h1{view-transition-name:vt-t-marketing-para-clinicas-en-piura;opacity:1!important;filter:none!important;transform:none!important}
+  .proj a.card[href="/proyectos/kukis-colors/"] .shot{view-transition-name:vt-i-kukis-colors}
+  .proj a.card[href="/proyectos/kukis-colors/"] h3{view-transition-name:vt-t-kukis-colors}
+  html:has(link[rel="canonical"][href$="/proyectos/kukis-colors/"]) main figure{view-transition-name:vt-i-kukis-colors;opacity:1!important;filter:none!important;transform:none!important}
+  html:has(link[rel="canonical"][href$="/proyectos/kukis-colors/"]) main h1{view-transition-name:vt-t-kukis-colors;opacity:1!important;filter:none!important;transform:none!important}
+  .proj a.card[href="/proyectos/chino-paulini/"] .shot{view-transition-name:vt-i-chino-paulini}
+  .proj a.card[href="/proyectos/chino-paulini/"] h3{view-transition-name:vt-t-chino-paulini}
+  html:has(link[rel="canonical"][href$="/proyectos/chino-paulini/"]) main figure{view-transition-name:vt-i-chino-paulini;opacity:1!important;filter:none!important;transform:none!important}
+  html:has(link[rel="canonical"][href$="/proyectos/chino-paulini/"]) main h1{view-transition-name:vt-t-chino-paulini;opacity:1!important;filter:none!important;transform:none!important}
+  .proj a.card[href="/proyectos/eco-yaku/"] .shot{view-transition-name:vt-i-eco-yaku}
+  .proj a.card[href="/proyectos/eco-yaku/"] h3{view-transition-name:vt-t-eco-yaku}
+  html:has(link[rel="canonical"][href$="/proyectos/eco-yaku/"]) main figure{view-transition-name:vt-i-eco-yaku;opacity:1!important;filter:none!important;transform:none!important}
+  html:has(link[rel="canonical"][href$="/proyectos/eco-yaku/"]) main h1{view-transition-name:vt-t-eco-yaku;opacity:1!important;filter:none!important;transform:none!important}
+  ::view-transition-group(vt-t-gastronomia){animation-duration:.65s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-group(vt-t-salud-y-estetica){animation-duration:.65s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-group(vt-t-inmobiliario-y-construccion){animation-duration:.65s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-group(vt-t-campanas-y-comunicacion-institucional){animation-duration:.65s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-group(vt-t-seo-local-piura){animation-duration:.65s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-group(vt-t-geo-que-es-y-por-que-importa){animation-duration:.65s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-group(vt-t-inteligencia-artificial-en-el-marketing){animation-duration:.65s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-group(vt-t-checklist-web-para-google-y-la-ia){animation-duration:.65s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-group(vt-t-seo-para-restaurantes-en-piura){animation-duration:.65s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-group(vt-t-marketing-para-clinicas-en-piura){animation-duration:.65s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-group(vt-t-kukis-colors){animation-duration:.65s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-group(vt-t-chino-paulini){animation-duration:.65s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-group(vt-t-eco-yaku){animation-duration:.65s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-group(vt-i-kukis-colors){animation-duration:.65s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-group(vt-i-chino-paulini){animation-duration:.65s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-group(vt-i-eco-yaku){animation-duration:.65s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+  ::view-transition-old(vt-i-kukis-colors),::view-transition-new(vt-i-kukis-colors){height:100%;object-fit:cover;object-position:top}
+  ::view-transition-old(vt-i-chino-paulini),::view-transition-new(vt-i-chino-paulini){height:100%;object-fit:cover;object-position:top}
+  ::view-transition-old(vt-i-eco-yaku),::view-transition-new(vt-i-eco-yaku){height:100%;object-fit:cover;object-position:top}
+}
+
+/* 2. Crossfade de las pestañas "De lo obvio / La de NORTHE": uno sale mientras el otro entra */
+.txt > span { transition: opacity .5s ease, filter .5s ease; }
+.txt .b { transform: none; filter: blur(6px); }
+.cmp.is-b .txt .a { transform: none; filter: blur(6px); }
+.cmp.is-b .txt .b { filter: none; }
+
+/* 3. Enfoque: entra desde el desenfoque hacia lo nítido */
+.js .rv { filter: blur(10px); transition: opacity .8s var(--ease), transform .8s var(--ease), filter .7s var(--ease); transition-delay: var(--d, 0s); }
+.js .rv.in { filter: none; }
+@media (prefers-reduced-motion: reduce) { .js .rv { filter: none; } }
+
+/* 4. Al pasar el cursor por una tarjeta, las demás se desenfocan y el ojo va a la nítida */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .proj a.card, .ladder .step { transition: filter .45s ease, opacity .45s ease; }
+  .rubros:has(.rubro:hover) .rubro:not(:hover),
+  .proj:has(a.card:hover) a.card:not(:hover),
+  .ladder:has(.step:hover) .step:not(:hover) { filter: blur(3px); opacity: .5; }
+}
+
+/* 5. Íconos con magnificación */
+.dock { position: relative; display: flex; align-items: flex-end; justify-content: center; gap: 18px; height: 88px; margin: 36px 0 8px; }
+.dock a { --m: 0; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: #111; color: #fff; text-decoration: none; transform-origin: 50% 100%; transform: translateY(calc(var(--m) * -10px)) scale(calc(.75 + .85 * var(--m))); opacity: calc(.3 + .7 * var(--m)); will-change: transform, opacity; }
+.dock svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.dock a:focus-visible { outline: 2px solid var(--saffron, #ffb829); outline-offset: 4px; }
+@media (hover: none), (prefers-reduced-motion: reduce) { .dock a { --m: 1 !important; transform: none; opacity: 1; } .dock { height: 64px; } }
