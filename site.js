@@ -1,6 +1,6 @@
 (function () {
   var doc = document.documentElement;
-  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches && !document.documentElement.classList.contains("fx-on");
   var canIO = "IntersectionObserver" in window;
   function $(s) { return document.querySelector(s); }
   function $$(s) { return Array.prototype.slice.call(document.querySelectorAll(s)); }

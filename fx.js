@@ -1,9 +1,24 @@
 (function () {
+  var root = document.documentElement;
+  var toggle = document.getElementById("fx-toggle");
+  if (toggle) {
+    var paint = function () {
+      var on = root.classList.contains("fx-on");
+      toggle.textContent = "Animaciones: " + (on ? "activadas" : "desactivadas");
+      toggle.setAttribute("aria-pressed", String(on));
+    };
+    paint();
+    toggle.addEventListener("click", function () {
+      var on = !root.classList.contains("fx-on");
+      try { localStorage.setItem("northe_fx", on ? "on" : "off"); } catch (e) {}
+      location.reload();
+    });
+  }
   var dock = document.getElementById("dock");
   if (!dock) return;
   var icons = [].slice.call(dock.querySelectorAll("a"));
   var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var reduce = !root.classList.contains("fx-on");
   if (!fine || reduce) return;
   var R = 170, mx = -9999, my = -9999, cur = icons.map(function () { return 0; }), raf = 0, focused = -1;
   function tick() {

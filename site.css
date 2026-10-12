@@ -24,7 +24,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-padding-top: 84px; background: #000; }
-@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+html.fx-on { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: #000;
@@ -90,10 +90,8 @@ p { margin: 0; }
 .ai-points p { font-size: 15px; font-weight: 300; line-height: 1.5; color: var(--silver); }
 @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
 @media (max-width: 560px) { .ai-points { grid-template-columns: 1fr; gap: 20px; } }
-@media (prefers-reduced-motion: no-preference) {
-  .hero-in > * { animation: rise .9s var(--ease) both; animation-delay: calc(var(--i, 0) * 90ms); }
-  @keyframes rise { from { opacity: 0; transform: translateY(18px); } }
-}
+html.fx-on .hero-in > * { animation: rise .9s var(--ease) both; animation-delay: calc(var(--i, 0) * 90ms); }
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } }
 .constellation { display: block; width: 100%; aspect-ratio: 1 / 1.05; touch-action: pan-y; }
 .crate-cap { margin-top: 10px; color: var(--ash); max-width: 28em; }
 
@@ -107,7 +105,7 @@ p { margin: 0; }
 .ticker-track span { padding: 14px 30px; white-space: nowrap; color: var(--ash); }
 .ticker-track .odd { color: var(--saffron); }
 @keyframes tick { to { transform: translateX(-50%); } }
-@media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
+html:not(.fx-on) .ticker-track { animation: none; }
 
 /* Eje del norte */
 .axis-sec { padding-block: clamp(56px, 8vw, 96px); }
@@ -131,7 +129,7 @@ p { margin: 0; }
 html:not(.js) .axis .line { transform: none; }
 html:not(.js) .axis .pt { scale: 1; }
 html:not(.js) .axis .lbl { opacity: 1; }
-@media (prefers-reduced-motion: reduce) { .axis .line, .axis .pt, .axis .lbl { transition: none; } }
+html:not(.fx-on) .axis .line, html:not(.fx-on) .axis .pt, html:not(.fx-on) .axis .lbl { transition: none; }
 .axis-cap { margin-top: 6px; color: var(--ash); }
 @media (max-width: 560px) { .axis .lbl b { font-size: 1.05rem; } .axis .lbl { font-size: 11px; } }
 
@@ -332,6 +330,4 @@ footer.foot { padding-block: 72px 36px; }
 /* Aparición al desplazarse */
 .js .rv { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); transition-delay: var(--d, 0s); }
 .js .rv.in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) {
-  .js .rv { opacity: 1; transform: none; transition: none; }
-}
+html.js:not(.fx-on) .rv { opacity: 1; transform: none; transition: none; }
