@@ -528,6 +528,7 @@ footer.foot { padding-block: 72px 36px; }
       <a class="link mono" href="#obvio">Qué auditamos</a>
       <a class="link mono" href="#metodo">Método</a>
       <a class="link mono" href="#rubros">Rubros</a>
+      <a class="link mono" href="#proyectos">Proyectos</a>
       <a class="link mono" href="#auditorias">Auditorías</a>
       <a class="link mono" href="#preguntas">Preguntas</a>
       <a class="link mono" href="/blog/">Blog</a>
@@ -728,6 +729,52 @@ footer.foot { padding-block: 72px 36px; }
           <p>Mensaje, territorio y coherencia de la marca, dentro del marco de la normativa electoral y de publicidad.</p>
           <div class="go-row"><a class="go" href="/campanas-y-comunicacion-institucional/">Ver el rubro →</a><a class="go" href="#auditoria-expres" data-rubro="Campañas y comunicación institucional">Auditar mi negocio →</a></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="proyectos">
+    <div class="wrap">
+      <div class="sec-head" data-rv>
+        <span class="mono">Proyectos</span>
+        <h2>Hechos en Piura, para negocios de Piura.</h2>
+        <p>Los tres primeros proyectos de NORTHE. Diseño web y estrategia digital de principio a fin, con el permiso de cada cliente para mostrarlos.</p>
+      </div>
+      <style>
+        .proj{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:8px}
+        .proj a.card{display:flex;flex-direction:column;gap:16px;color:inherit;text-decoration:none}
+        .proj .shot{display:block;aspect-ratio:16/10;border-radius:24px;overflow:hidden;background:#111}
+        .proj .shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s ease}
+        .proj a.card:hover .shot img,.proj a.card:focus-visible .shot img{transform:scale(1.03)}
+        .proj .shot.dark{background:#070c1d}.proj .shot.dark img{object-fit:contain;object-position:center}.proj .tag{color:#9a9a9a}
+        .proj h3{margin:0;font-weight:400;letter-spacing:-.03em}
+        .proj p{margin:0;color:#bdbdbd;font-weight:300}
+        .proj .go{color:#fff;text-decoration:underline;text-decoration-color:#9a9a9a;text-underline-offset:6px}
+        @media(max-width:900px){.proj{grid-template-columns:1fr}}
+        @media(prefers-reduced-motion:reduce){.proj .shot img{transition:none}}
+      </style>
+      <div class="proj" data-stagger>
+        <a class="card" href="https://kukiscolors.com" target="_blank" rel="noopener">
+          <span class="shot"><img src="/img/kukis-colors.jpg" width="1568" height="751" loading="lazy" alt="Página de inicio de Kukis Colors, joyería de oro rose con catálogo en línea"></span>
+          <span class="tag mono">Joyería · Comercio</span>
+          <h3>Kukis Colors</h3>
+          <p>Catálogo en línea con fotos propias, preguntas frecuentes y pedidos por WhatsApp, con envíos a todo el Perú.</p>
+          <span class="go">Ver el sitio ↗</span>
+        </a>
+        <a class="card" href="https://chinopaulini.com" target="_blank" rel="noopener">
+          <span class="shot"><img src="/img/chino-paulini.jpg" width="1568" height="751" loading="lazy" alt="Página de inicio de Chino Paulini, empresario gastronómico de Piura"></span>
+          <span class="tag mono">Gastronomía · Marca personal</span>
+          <h3>Chino Paulini</h3>
+          <p>Sitio de marca personal de un empresario gastronómico: trayectoria, negocios, prensa y contacto directo.</p>
+          <span class="go">Ver el sitio ↗</span>
+        </a>
+        <a class="card" href="https://ecoyakupiura.com" target="_blank" rel="noopener">
+          <span class="shot dark"><img src="/img/eco-yaku.jpg" width="900" height="380" loading="lazy" alt="Página de inicio de Eco Yaku, agua pura ozonizada a domicilio en Piura"></span>
+          <span class="tag mono">Agua · Servicio a domicilio</span>
+          <h3>Eco Yaku</h3>
+          <p>Página de pedidos por WhatsApp, con plan para empresas y cobertura en Piura y Sullana.</p>
+          <span class="go">Ver el sitio ↗</span>
+        </a>
       </div>
     </div>
   </section>
