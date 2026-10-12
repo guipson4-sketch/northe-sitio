@@ -30,7 +30,7 @@ body {
   background: #000;
   color: #fff;
   font-family: var(--body);
-  font-weight: 200;
+  font-weight: 300;
   font-size: 18px;
   line-height: 1.5;
   font-feature-settings: "ss01" on;
@@ -82,7 +82,7 @@ p { margin: 0; }
 .hero > * { min-width: 0; }
 .hero h1 { font-size: clamp(2.8rem, 6vw, 78px); line-height: 1.02; letter-spacing: -.04em; }
 .hero h1 em { font-style: normal; color: var(--saffron); }
-.hero .lede { margin-top: 28px; max-width: 30em; font-size: 18px; font-weight: 200; }
+.hero .lede { margin-top: 28px; max-width: 30em; font-size: 18px; font-weight: 300; }
 .hero .ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 34px; }
 .eyebrow { display: block; margin-bottom: 26px; color: var(--saffron); }
 .ai-points { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 36px; max-width: 40em; }
@@ -140,7 +140,7 @@ section.sec { padding-block: clamp(72px, 10vw, 120px); }
 .sec-head { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); grid-template-areas: "label label" "title body"; gap: 18px clamp(32px, 6vw, 96px); align-items: end; margin-bottom: clamp(44px, 6vw, 80px); }
 .sec-head .mono { grid-area: label; color: var(--saffron); }
 .sec-head h2 { grid-area: title; font-size: clamp(2.2rem, 4.6vw, 48px); line-height: 1.1; letter-spacing: -.04em; }
-.sec-head p { grid-area: body; color: var(--silver); font-size: 18px; font-weight: 200; max-width: 30em; }
+.sec-head p { grid-area: body; color: var(--silver); font-size: 18px; font-weight: 300; max-width: 30em; }
 .sec-head h2:last-child { grid-column: 1 / -1; }
 @media (max-width: 860px) { .sec-head { grid-template-columns: 1fr; grid-template-areas: "label" "title" "body"; } }
 
@@ -229,7 +229,7 @@ fieldset legend { padding: 0; margin-bottom: 12px; font-size: 18px; font-weight:
 .finds li { color: var(--silver); font-weight: 300; }
 .msg { width: 100%; margin-top: 8px; padding: 14px 18px; border: 1px solid #333; border-radius: 20px; background: #000; color: #fff; font: 300 15px/1.5 var(--body); resize: vertical; }
 .res-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; margin-top: 24px; }
-.ph { color: var(--silver); font-weight: 200; }
+.ph { color: var(--silver); font-weight: 300; }
 @media (max-width: 900px) { .audit { grid-template-columns: 1fr; } }
 
 /* Escalera de precios */
@@ -267,7 +267,7 @@ fieldset legend { padding: 0; margin-bottom: 12px; font-size: 18px; font-weight:
 .cta { padding-block: clamp(88px, 12vw, 160px); }
 .cta .mono { display: block; margin-bottom: 22px; color: var(--saffron); }
 .cta h2 { font-size: clamp(2.6rem, 6.4vw, 78px); line-height: 1.02; letter-spacing: -.04em; max-width: 14em; }
-.cta p { margin-top: 26px; max-width: 30em; color: var(--silver); font-size: 18px; font-weight: 200; }
+.cta p { margin-top: 26px; max-width: 30em; color: var(--silver); font-size: 18px; font-weight: 300; }
 .cta .ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 36px; }
 
 /* Pie */
@@ -292,13 +292,13 @@ footer.foot { padding-block: 72px 36px; }
 .page-hero { padding-block: clamp(32px, 5vw, 64px) clamp(56px, 8vw, 104px); }
 .page-hero h1 { font-size: clamp(2.6rem, 6vw, 78px); line-height: 1.02; letter-spacing: -.04em; max-width: 14em; }
 .page-hero h1 em { font-style: normal; color: var(--saffron); }
-.page-hero .lede { margin-top: 28px; max-width: 34em; font-size: 18px; font-weight: 200; color: var(--silver); }
+.page-hero .lede { margin-top: 28px; max-width: 34em; font-size: 18px; font-weight: 300; color: var(--silver); }
 .page-hero .ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 34px; }
 .article-head { padding-block: clamp(32px, 5vw, 64px) 32px; }
 .article-head .meta { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-bottom: 22px; color: var(--ash); }
 .article-head .meta .tag { color: var(--saffron); }
 .article-head h1 { font-size: clamp(2.2rem, 5vw, 64px); line-height: 1.04; letter-spacing: -.04em; max-width: 16em; }
-.article-head .lede { margin-top: 26px; max-width: 36em; font-size: 20px; font-weight: 200; color: var(--silver); }
+.article-head .lede { margin-top: 26px; max-width: 36em; font-size: 20px; font-weight: 300; color: var(--silver); }
 .article-body { padding-bottom: clamp(64px, 8vw, 104px); }
 .prose { max-width: 46rem; font-weight: 300; color: var(--silver); }
 .prose h2 { margin: 2.4em 0 .5em; font-size: clamp(1.7rem, 3.2vw, 2.4rem); color: #fff; letter-spacing: -.03em; scroll-margin-top: 90px; }
