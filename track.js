@@ -56,6 +56,7 @@
     if (!a) return;
     var h = a.getAttribute("href") || "";
     var page = location.pathname;
+    if (/\.pdf($|\?)/.test(h)) { track("descarga_reporte_ejemplo", { pagina: page, archivo: h }); return; }
     if (a.id === "wa" || h.indexOf("wa.me/") > -1) track("contacto_whatsapp", { pagina: page, desde: a.id === "wa" ? "resultado_auditoria" : "enlace" });
     else if (a.id === "mail") track("contacto_email", { pagina: page, desde: "resultado_auditoria" });
     else if (h.indexOf("mailto:") === 0) track("contacto_email", { pagina: page, desde: "enlace" });

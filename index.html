@@ -295,7 +295,7 @@ html.fx-on .hero-in > * { animation: rise .9s var(--ease) both; animation-delay:
 html:not(.fx-on) .ticker-track { animation: none; }
 
 /* Eje del norte */
-.axis-sec { padding-block: clamp(56px, 8vw, 96px); }
+.axis-sec { padding-block: clamp(40px, 6vw, 72px); }
 .axis-sec h2 { margin-bottom: 8px; color: var(--saffron); font-size: 12px; font-weight: 600; letter-spacing: .08em; }
 .axis { position: relative; height: 230px; margin-top: 8px; }
 .axis .line { position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: #4a4a4a; transform-origin: left; transform: scaleX(0); transition: transform 1.6s var(--ease); }
@@ -321,7 +321,7 @@ html:not(.fx-on) .axis .line, html:not(.fx-on) .axis .pt, html:not(.fx-on) .axis
 @media (max-width: 560px) { .axis .lbl b { font-size: 1.05rem; } .axis .lbl { font-size: 11px; } }
 
 /* Secciones */
-section.sec { padding-block: clamp(72px, 10vw, 120px); }
+section.sec { padding-block: clamp(56px, 7.5vw, 92px); }
 .sec-head { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); grid-template-areas: "label label" "title body"; gap: 18px clamp(32px, 6vw, 96px); align-items: end; margin-bottom: clamp(44px, 6vw, 80px); }
 .sec-head .mono { grid-area: label; color: var(--saffron); }
 .sec-head h2 { grid-area: title; font-size: clamp(2.2rem, 4.6vw, 48px); line-height: 1.1; letter-spacing: -.04em; }
@@ -569,6 +569,7 @@ html.js:not(.fx-on) .rv { opacity: 1; transform: none; transition: none; }
         <a class="btn" href="#auditoria-expres">Hacer la auditoría exprés</a>
         <a class="btn ghost" href="#metodo">Ver el método</a>
       </div>
+      <p class="hero-note mono">Gratis · 2 minutos · puntaje sobre 100 · sin datos de contacto</p>
     </div>
     <div>
       <canvas class="constellation" id="constellation" role="img" aria-label="Constelación de pequeños triángulos de colores que forma la letra N de NORTHE; uno de ellos es distinto a los demás"></canvas>
@@ -578,10 +579,18 @@ html.js:not(.fx-on) .rv { opacity: 1; transform: none; transition: none; }
 
   <div class="wrap">
     <div class="stats" data-stagger>
+      <div class="stat"><b><span data-count="7">7</span></b><span class="mono">Años de experiencia</span></div>
       <div class="stat"><b><span data-count="5">5</span></b><span class="mono">Ciudades del norte</span></div>
       <div class="stat"><b><span data-count="3">3</span></b><span class="mono">Fases de método</span></div>
-      <div class="stat"><b><span data-count="4">4</span></b><span class="mono">Herramientas propias</span></div>
       <div class="stat"><b>S/ 0</b><span class="mono">Auditoría exprés</span></div>
+    </div>
+    <div class="worked" data-rv>
+      <span class="mono">Han trabajado con NORTHE</span>
+      <ul>
+        <li><a href="/proyectos/kukis-colors/">Kukis Colors</a></li>
+        <li><a href="/proyectos/chino-paulini/">Chino Paulini</a></li>
+        <li><a href="/proyectos/eco-yaku/">Eco Yaku</a></li>
+      </ul>
     </div>
   </div>
 
@@ -787,6 +796,138 @@ html.js:not(.fx-on) .rv { opacity: 1; transform: none; transition: none; }
     </div>
   </section>
 
+<style>
+.hero-note{margin:14px 0 0;color:var(--ash);font-size:13px;letter-spacing:.04em}
+.worked{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 28px;margin:-40px 0 48px}
+.worked .mono{color:var(--ash);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.worked ul{display:flex;flex-wrap:wrap;gap:6px 28px;margin:0;padding:0;list-style:none}
+.worked a{color:#fff;font-size:clamp(1.1rem,2.2vw,1.5rem);font-weight:400;letter-spacing:-.03em;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+.worked a:hover,.worked a:focus-visible{border-bottom-color:var(--saffron)}
+.who{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:clamp(28px,5vw,72px);align-items:start}
+.who-card{border:1px solid #262626;border-radius:24px;padding:clamp(24px,3vw,40px);background:#050505}
+.who-n{display:block;font-size:clamp(6rem,14vw,11rem);font-weight:300;line-height:.9;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1.5px var(--iris)}
+.who-card b{display:block;margin-top:14px;font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:400;letter-spacing:-.03em}
+.who-card .mono{display:block;margin-top:6px;color:var(--ash)}
+.who-card .dir{margin-top:28px;padding-top:18px;border-top:1px solid #262626;color:var(--silver);font-size:16px}
+.who-card .dir b{display:inline;margin:0;font-size:inherit;color:#fff}
+.who-body p{margin:0 0 22px;color:var(--silver);font-weight:300;max-width:34em}
+.who-list{display:grid;gap:0;margin:0;padding:0;list-style:none}
+.who-list li{display:grid;grid-template-columns:200px minmax(0,1fr);gap:20px;padding-block:22px;border-top:1px solid #262626}
+.who-list li:last-child{border-bottom:1px solid #262626}
+.who-list b{font-weight:400;font-size:20px;letter-spacing:-.02em;color:#fff}
+.who-list span{color:var(--silver);font-weight:300}
+@media(max-width:860px){.who{grid-template-columns:1fr}.who-list li{grid-template-columns:1fr;gap:6px}}
+.pv{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(28px,5vw,72px);align-items:center}
+.pv-copy ul{margin:22px 0 0;padding:0;list-style:none;display:grid;gap:14px}
+.pv-copy li{padding-left:22px;position:relative;color:var(--silver)}
+.pv-copy li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--saffron)}
+.pv-copy li b{color:#fff;font-weight:400}
+.mock{border:1px solid #262626;border-radius:24px;background:#070707;padding:clamp(16px,2.4vw,28px);display:grid;gap:14px;min-width:0}
+.mock-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.mock-top b{font-weight:400;font-size:15px;letter-spacing:-.01em}
+.pill{display:inline-block;background:var(--saffron);color:#000;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.m-hero{background:var(--saffron);color:#000;border-radius:18px;padding:18px 20px}
+.m-hero .l{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.75}
+.m-hero .v{display:block;font-size:clamp(1.9rem,4vw,2.6rem);font-weight:400;letter-spacing:-.04em;line-height:1.1;margin-top:4px;font-variant-numeric:tabular-nums}
+.m-bar{height:7px;border-radius:99px;background:rgba(0,0,0,.18);margin-top:10px;overflow:hidden}.m-bar i{display:block;height:100%;width:76%;background:#000;border-radius:99px}
+.m-hero .s{font-size:13px;margin-top:6px}
+.m-sem{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.m-sem div{border:1px solid #262626;border-radius:14px;padding:12px 14px;border-left-width:4px}
+.m-sem .g{border-left-color:#3fbf8f}.m-sem .a{border-left-color:var(--saffron)}.m-sem .r{border-left-color:#ff6159}
+.m-sem small{display:block;color:var(--ash);font-size:12px}
+.m-sem b{display:block;font-weight:400;font-size:20px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.m-sem em{font-style:normal;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.m-sem .g em{color:#3fbf8f}.m-sem .a em{color:var(--saffron)}.m-sem .r em{color:#ff6159}
+.m-chart{border:1px solid #262626;border-radius:14px;padding:12px 14px}
+.m-chart small{color:var(--ash);font-size:12px}
+.m-chart svg{display:block;width:100%;height:auto;margin-top:6px}
+.m-comp{border:1px solid #262626;border-radius:14px;padding:12px 14px}
+.m-comp .h{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:14px}
+.m-comp p{margin:6px 0 0;font-size:14px;color:var(--silver)}
+.mock-cap{margin:0;color:var(--ash);font-size:13px}
+@media(max-width:900px){.pv{grid-template-columns:1fr}}
+@media(max-width:420px){.m-sem{grid-template-columns:1fr}}
+.ctbl-wrap{margin-top:56px}
+.ctbl-scroll{overflow-x:auto;margin-top:14px;-webkit-overflow-scrolling:touch}
+.ctbl{width:100%;min-width:760px;border-collapse:collapse;font-size:16px}
+.ctbl th,.ctbl td{text-align:left;vertical-align:top;padding:16px 18px;border-top:1px solid #262626}
+.ctbl thead th{border-top:0;color:#fff;font-weight:400;font-size:18px;letter-spacing:-.02em;padding-bottom:12px}
+.ctbl thead th.pick{color:var(--saffron)}
+.ctbl tbody th{color:var(--ash);font-weight:600;font-size:12px;letter-spacing:.07em;text-transform:uppercase;width:150px}
+.ctbl td{color:var(--silver);font-weight:300}
+.ctbl td.pick{background:#0b0b0b}
+.ctbl td strong{color:#fff;font-weight:400}
+.sample{margin:22px 0 0}
+.sample a{color:#fff;text-decoration:underline;text-decoration-color:var(--saffron);text-underline-offset:6px}
+@media(prefers-reduced-motion:reduce){.worked a{transition:none}}
+</style>
+  <section class="sec" id="equipo" aria-labelledby="equipo-t">
+    <div class="wrap">
+      <div class="sec-head" data-rv>
+        <span class="mono">Quién está detrás</span>
+        <h2 id="equipo-t">Siete años en el mercado, con los números primero.</h2>
+        <p>NORTHE es una consultora de Piura. Combinamos arquitectura de marca, inteligencia artificial y ciencias del comportamiento para negocios del norte del Perú.</p>
+      </div>
+      <div class="who" data-stagger>
+        <div class="who-card">
+          <span class="who-n" aria-hidden="true">7</span>
+          <b>años de experiencia</b>
+          <span class="mono">en el mercado del norte</span>
+          <p class="dir">Dirección: <b>Andreé Cuba</b><br>Piura, Perú</p>
+        </div>
+        <div class="who-body">
+          <p>Hemos visto de cerca qué hace que un negocio del norte sea elegido y qué lo hace pasar desapercibido. Por eso nuestro trabajo no empieza por el diseño, sino por lo que el negocio necesita para crecer.</p>
+          <ul class="who-list">
+            <li><b>Los números primero</b><span>Partimos de cuánto quieres facturar y cuántos clientes hacen falta. Después hablamos de contenido.</span></li>
+            <li><b>Sin métricas de vanidad</b><span>Un like no paga la planilla. Medimos ventas, pedidos y costo por cliente.</span></li>
+            <li><b>Estrategia con acento del norte</b><span>Lo local no se copia de Lima: se filtra por lenguaje, costumbres y plaza.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="panel" aria-labelledby="panel-t">
+    <div class="wrap">
+      <div class="pv">
+        <div class="pv-copy" data-rv>
+          <span class="mono" style="color:var(--saffron)">Así se ve el trabajo</span>
+          <h2 id="panel-t" style="margin:12px 0 0;font-size:clamp(2.2rem,4.6vw,48px);line-height:1.1;letter-spacing:-.04em;font-weight:400">Los números de tu marca, en un solo panel.</h2>
+          <p style="margin:18px 0 0;color:var(--silver);max-width:30em">Es la herramienta con la que NORTHE sigue a cada marca en acompañamiento. Cada cifra tiene su fuente, y cada semáforo dice qué hacer.</p>
+          <ul>
+            <li><b>KPIs con línea base y meta.</b> Se mide el avance contra un punto de partida real.</li>
+            <li><b>Proyección a tres meses,</b> con un rango, para saber si la meta es alcanzable.</li>
+            <li><b>Reporte de competencia cada tres días,</b> con alertas y sugerencias.</li>
+          </ul>
+        </div>
+        <div data-rv>
+          <div class="mock" role="img" aria-label="Vista de ejemplo del panel NORTHE con ventas del mes frente a la meta, cuatro semáforos de métricas, una proyección de ventas y un reporte de competencia. Datos ficticios.">
+            <div class="mock-top"><b>Panel NORTHE</b><span class="pill">Ejemplo · datos ficticios</span></div>
+            <div class="m-hero"><span class="l">Ventas del mes</span><span class="v">S/ 48 200</span><div class="m-bar"><i></i></div><div class="s">76 % de la meta de S/ 63 000</div></div>
+            <div class="m-sem">
+              <div class="g"><small>Reproducción a 3 s</small><b>38 %</b><em>Sano</em></div>
+              <div class="g"><small>CPM</small><b>S/ 6.90</b><em>Sano</em></div>
+              <div class="a"><small>Costo por clic</small><b>S/ 0.61</b><em>Atención</em></div>
+              <div class="r"><small>Disponibilidad en apps</small><b>62 %</b><em>Corregir</em></div>
+            </div>
+            <div class="m-chart"><small>Ventas por mes y proyección</small>
+              <svg viewBox="0 0 360 120" aria-hidden="true">
+                <g stroke="#262626" stroke-width="1"><line x1="0" y1="20" x2="360" y2="20"/><line x1="0" y1="50" x2="360" y2="50"/><line x1="0" y1="80" x2="360" y2="80"/></g>
+                <path d="M190 54 L240 36 L290 22 L340 8 L340 52 L290 52 L240 56 Z" fill="#8052ff" opacity=".28"/>
+                <path d="M10 92 L46 86 L82 80 L118 70 L154 62 L190 54" fill="none" stroke="#ffb829" stroke-width="2.5"/>
+                <path d="M190 54 L240 46 L290 37 L340 28" fill="none" stroke="#8052ff" stroke-width="2.5" stroke-dasharray="6 5"/>
+                <circle cx="190" cy="54" r="4" fill="#ffb829"/><circle cx="340" cy="28" r="4" fill="#8052ff"/>
+                <g fill="#9a9a9a" font-size="9" font-family="Inter,sans-serif"><text x="10" y="114">may</text><text x="82" y="114">jul</text><text x="154" y="114">sep</text><text x="240" y="114">nov</text><text x="326" y="114">ene</text></g>
+              </svg>
+            </div>
+            <div class="m-comp"><div class="h"><b>Competencia · alerta media</b><span style="color:var(--ash)">hace 1 día</span></div><p>Publicó un local nuevo y mueve más reels. Sugerencia: reforzar tu producto estrella con un reel de gancho de 3 segundos.</p></div>
+          </div>
+          <p class="mock-cap" style="margin-top:12px">Vista de ejemplo con datos ficticios. No corresponde a ningún cliente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="sec" id="auditorias">
     <div class="wrap">
       <div class="sec-head" data-rv>
@@ -890,6 +1031,22 @@ html.js:not(.fx-on) .rv { opacity: 1; transform: none; transition: none; }
             </ul>
           </div>
         </div>
+        <div class="ctbl-wrap" data-rv>
+        <h3 class="ladder-title mono muted">Compáralas lado a lado</h3>
+        <div class="ctbl-scroll" tabindex="0" role="region" aria-label="Comparación de las cuatro opciones de auditoría">
+          <table class="ctbl">
+            <thead><tr><th><span class="sr-only" style="position:absolute;left:-9999px">Concepto</span></th><th>Exprés</th><th class="pick">Esencial</th><th>Completa</th><th>Acompañamiento</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Precio</th><td><strong>S/ 0</strong></td><td class="pick"><strong>S/ 450 + IGV</strong><br>lanzamiento; luego S/ 600 + IGV</td><td>Se cotiza</td><td>Se cotiza según alcance</td></tr>
+              <tr><th scope="row">Qué revisa</th><td>Siete preguntas sobre tu negocio</td><td class="pick">Un canal: Meta o Google Business</td><td>La Fase 1 completa: números, competencia y embudo</td><td>Fases 2 y 3: identidad y ejecución</td></tr>
+              <tr><th scope="row">Qué recibes</th><td>Puntaje y hasta tres hallazgos</td><td class="pick">Diagnóstico y plan de acción a 30 días</td><td>Hoja de ruta</td><td>Seguimiento mensual</td></tr>
+              <tr><th scope="row">Campañas y piezas</th><td>No incluye</td><td class="pick">No incluye</td><td>No incluye inversión en publicidad ni producción de piezas</td><td>Se define en la cotización</td></tr>
+              <tr><th scope="row">Cuándo conviene</th><td>Para saber si vale la pena ir más a fondo</td><td class="pick">Para revisar un canal a precio de lanzamiento</td><td>Para ordenar números, competencia y embudo</td><td>Para ejecutar con seguimiento después del diagnóstico</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="sample"><a href="/recursos/ejemplo-auditoria-esencial.pdf" target="_blank" rel="noopener">Ver un reporte de ejemplo en PDF (negocio ficticio, 2 páginas)</a></p>
+      </div>
         <p class="fine">Precios en soles peruanos, sin IGV. En la factura se suma el 18% de IGV. Lo que se cotiza se confirma por escrito antes de empezar.</p>
       </div>
     </div>
@@ -1104,6 +1261,7 @@ html.js:not(.fx-on) .rv { opacity: 1; transform: none; transition: none; }
       <div class="ctas">
         <a class="btn dark" href="#auditoria-expres">Hacer la auditoría exprés</a>
         <a class="btn ghost" href="mailto:northepe@gmail.com">northepe@gmail.com</a>
+        <a class="btn ghost" href="https://wa.me/51960190963?text=Hola%2C%20quiero%20agendar%20una%20llamada%20de%2020%20minutos%20con%20NORTHE." target="_blank" rel="noopener">Agendar una llamada de 20 minutos</a>
         <a class="btn ghost" href="https://wa.me/51960190963" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
