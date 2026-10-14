@@ -897,33 +897,31 @@ html.js:not(.fx-on) .rv { opacity: 1; transform: none; transition: none; }
           <p style="margin:18px 0 0;color:var(--silver);max-width:30em">Es la herramienta con la que NORTHE sigue a cada marca en acompañamiento. Cada cifra tiene su fuente, y cada semáforo dice qué hacer.</p>
           <ul>
             <li><b>KPIs con línea base y meta.</b> Se mide el avance contra un punto de partida real.</li>
-            <li><b>Proyección a tres meses,</b> con un rango, para saber si la meta es alcanzable.</li>
-            <li><b>Reporte de competencia cada tres días,</b> con alertas y sugerencias.</li>
+            <li><b>Semáforos con umbrales de la metodología,</b> que dicen qué corregir antes de gastar en publicidad.</li>
+            <li><b>Proyección a tres meses y alertas de competencia,</b> en el panel completo de cada marca.</li>
           </ul>
         </div>
         <div data-rv>
-          <div class="mock" role="img" aria-label="Vista de ejemplo del panel NORTHE con ventas del mes frente a la meta, cuatro semáforos de métricas, una proyección de ventas y un reporte de competencia. Ejemplo ilustrativo.">
-            <div class="mock-top"><b>Panel NORTHE</b><span class="pill soft">Ejemplo ilustrativo</span></div>
-            <div class="m-hero"><span class="l">Ventas del mes</span><span class="v">S/ 48 200</span><div class="m-bar"><i></i></div><div class="s">76 % de la meta de S/ 63 000</div></div>
+          <div class="mock" role="img" aria-label="Caso real anonimizado de un restaurante de sánguches criollos: unidades vendidas 10 % menos que el año anterior, tres indicadores por corregir, un día fuerte de la semana, la curva de ventas en la aplicación de delivery en índice y la concentración de la carta. Sin nombres ni montos.">
+            <div class="mock-top"><b>Panel NORTHE</b><span class="pill soft">Caso real · datos anonimizados</span></div>
+            <div class="m-hero"><span class="l">Unidades vendidas, ago–sep contra el año anterior</span><span class="v">−10 %</span><div class="s">Primeras semanas del diagnóstico de un restaurante de sánguches criollos en el norte del Perú</div></div>
             <div class="m-sem">
-              <div class="g"><small>Reproducción a 3 s</small><b>38 %</b><em>Sano</em></div>
-              <div class="g"><small>CPM</small><b>S/ 6.90</b><em>Sano</em></div>
-              <div class="a"><small>Costo por clic</small><b>S/ 0.61</b><em>Atención</em></div>
-              <div class="r"><small>Disponibilidad en apps</small><b>62 %</b><em>Corregir</em></div>
+              <div class="r"><small>Producto más vendido hace un año</small><b>−53 %</b><em>Corregir</em></div>
+              <div class="r"><small>Ventas de la línea de almuerzo</small><b>−48 %</b><em>Corregir</em></div>
+              <div class="r"><small>Disponibilidad en la app de delivery</small><b>58 %</b><em>Corregir</em></div>
+              <div class="g"><small>Día fuerte frente al promedio</small><b>1.9×</b><em>Sano</em></div>
             </div>
-            <div class="m-chart"><small>Ventas por mes y proyección</small>
+            <div class="m-chart"><small>Ventas mensuales en la app de delivery, índice (mes más alto = 100)</small>
               <svg viewBox="0 0 360 120" aria-hidden="true">
                 <g stroke="#262626" stroke-width="1"><line x1="0" y1="20" x2="360" y2="20"/><line x1="0" y1="50" x2="360" y2="50"/><line x1="0" y1="80" x2="360" y2="80"/></g>
-                <path d="M190 54 L240 36 L290 22 L340 8 L340 52 L290 52 L240 56 Z" fill="#8052ff" opacity=".28"/>
-                <path d="M10 92 L46 86 L82 80 L118 70 L154 62 L190 54" fill="none" stroke="#ffb829" stroke-width="2.5"/>
-                <path d="M190 54 L240 46 L290 37 L340 28" fill="none" stroke="#8052ff" stroke-width="2.5" stroke-dasharray="6 5"/>
-                <circle cx="190" cy="54" r="4" fill="#ffb829"/><circle cx="340" cy="28" r="4" fill="#8052ff"/>
-                <g fill="#9a9a9a" font-size="9" font-family="Inter,sans-serif"><text x="10" y="114">may</text><text x="82" y="114">jul</text><text x="154" y="114">sep</text><text x="240" y="114">nov</text><text x="326" y="114">ene</text></g>
+                <path d="M10.0 87.2 L38.3 86.4 L66.7 81.6 L95.0 75.2 L123.3 44.0 L151.7 22.4 L180.0 20.0 L208.3 34.4 L236.7 52.0 L265.0 53.6 L293.3 68.0 L321.7 74.4 L350.0 79.2" fill="none" stroke="#ffb829" stroke-width="2.5"/>
+                <circle cx="180.0" cy="20.0" r="4" fill="#ffb829"/><circle cx="350.0" cy="79.2" r="4" fill="#8052ff"/>
+                <g fill="#9a9a9a" font-size="9" font-family="Inter,sans-serif"><text x="2" y="114">sep 25</text><text x="111" y="114">ene</text><text x="168" y="114">mar</text><text x="253" y="114">jun</text><text x="358" y="114" text-anchor="end">sep 26</text></g>
               </svg>
             </div>
-            <div class="m-comp"><div class="h"><b>Competencia · alerta media</b><span style="color:var(--ash)">hace 1 día</span></div><p>Publicó un local nuevo y mueve más reels. Sugerencia: reforzar tu producto estrella con un reel de gancho de 3 segundos.</p></div>
+            <div class="m-comp"><div class="h"><b>Concentración de la carta</b><span style="color:var(--ash)">de casi 200 productos</span></div><p>Unos 35 productos hacen el 80 % de la venta. Casi la mitad de la carta casi no se mueve.</p></div>
           </div>
-          <p class="mock-cap" style="margin-top:12px">Ejemplo ilustrativo: las cifras están inventadas para mostrar el formato. No corresponde a ningún cliente.</p>
+          <p class="mock-cap" style="margin-top:12px">Caso real con autorización del cliente. Cifras en porcentajes e índices, sin nombres ni montos. Son hallazgos de las primeras semanas: el plan de 90 días recién empieza.</p>
         </div>
       </div>
     </div>
