@@ -942,6 +942,7 @@ html.js:not(.fx-on) .rv { opacity: 1; transform: none; transition: none; }
         <p>Responde siete preguntas, recibe un puntaje y hasta tres hallazgos. Si quieres ir más a fondo, sigue la escalera de abajo.</p>
       </div>
 
+      <span id="auditoria"></span>
       <div class="audit" id="auditoria-expres">
         <div class="panel">
           <h3>Auditoría exprés</h3>
@@ -1667,6 +1668,8 @@ html.js:not(.fx-on) .rv { opacity: 1; transform: none; transition: none; }
     var nombre = $("#negocio").value.trim();
     var rubro = $("#rubro").value;
     var msg = "Hola, soy " + (nombre || "un negocio") + " (" + rubro + "). Hice la auditoría exprés de NORTHE y mi puntaje fue " + pct + "/100. Quiero conversar sobre el siguiente paso.";
+    var origen = window.northeOrigen ? window.northeOrigen() : "";
+    if (origen) msg += " (Llegué desde " + origen + ".)";
     $("#msg").value = msg;
     $("#copied").textContent = "";
     $("#wa").href = "https://wa.me/51960190963?text=" + encodeURIComponent(msg);

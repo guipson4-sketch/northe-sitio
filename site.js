@@ -42,3 +42,18 @@
   watch(rvEls, function (el) { el.classList.add("in"); });
   watch($$(".rail"), function (el) { el.classList.add("in"); });
 })();
+
+// Bloque de LinkedIn al final de cada artículo: compartir y seguir.
+(function () {
+  var art = document.querySelector(".article-body .prose");
+  if (!art) return;
+  var canon = document.querySelector('link[rel="canonical"]');
+  var url = canon ? canon.href : location.href.split("#")[0];
+  var box = document.createElement("aside");
+  box.className = "li-share";
+  box.setAttribute("aria-label", "LinkedIn");
+  box.innerHTML = '<p>¿Te sirvió? Compártelo con alguien que lo necesite.</p>' +
+    '<a class="btn small" target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url) + '">Compartir en LinkedIn</a>' +
+    '<a class="btn ghost" target="_blank" rel="me noopener" href="https://www.linkedin.com/in/northe-17bbba3b1/">Seguir a NORTHE en LinkedIn</a>';
+  art.appendChild(box);
+})();

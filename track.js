@@ -26,6 +26,22 @@
   }
   window.northeTrack = track;
 
+  // Origen de la visita (UTM o referido de LinkedIn). Se guarda solo en la sesión del navegador.
+  function origen() {
+    try {
+      var q = new URLSearchParams(location.search);
+      var src = q.get("utm_source"), camp = q.get("utm_campaign");
+      if (!src && /linkedin\.com|lnkd\.in/.test(document.referrer || "")) src = "linkedin";
+      if (src) sessionStorage.setItem("northe_origen", JSON.stringify({ s: src, c: camp || "" }));
+      var o = JSON.parse(sessionStorage.getItem("northe_origen") || "null");
+      if (!o) return "";
+      var nombre = o.s === "linkedin" ? "LinkedIn" : o.s;
+      return o.c ? nombre + " (" + o.c + ")" : nombre;
+    } catch (e) { return ""; }
+  }
+  origen();
+  window.northeOrigen = origen;
+
   function banner() {
     var css = document.createElement("style");
     css.textContent =
@@ -66,7 +82,7 @@
   }, true);
 
   document.addEventListener("submit", function (e) {
-    if (e.target.querySelector && e.target.querySelector("#calc")) track("auditoria_completada", { pagina: location.pathname });
+    if (e.target.querySelector && e.target.querySelector("#calc")) track("auditoria_completada", { pagina: location.pathname, origen: origen() });
   }, true);
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();

@@ -331,3 +331,6 @@ footer.foot { padding-block: 72px 36px; }
 .js .rv { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); transition-delay: var(--d, 0s); }
 .js .rv.in { opacity: 1; transform: none; }
 html.js:not(.fx-on) .rv { opacity: 1; transform: none; transition: none; }
+
+.li-share { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; margin-top: 3em; padding: 22px 0 0; border-top: 1px solid var(--ash); }
+.li-share p { flex: 1 1 100%; margin: 0; color: #fff; font-weight: 400; }
