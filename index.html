@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Consultoría de marca y marketing digital en Piura | NORTHE</title>
-<meta name="description" content="Consultora de marca y marketing en Piura: auditoría exprés gratis, SEO, visibilidad en IA y automatización con IA para el norte del Perú.">
+<meta name="description" content="Consultora de marca y marketing en Piura: diagnosticamos con números y ejecutamos el plan. Web, SEO local y marketing mensual. Auditoría exprés gratis.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://northeconsultora.com/">
 <meta name="theme-color" content="#000000">
@@ -540,14 +540,13 @@ html.js:not(.fx-on) .rv { opacity: 1; transform: none; transition: none; }
   <div class="wrap bar">
     <a class="brand" href="#inicio" aria-label="NORTHE, inicio"><svg class="logo" viewBox="0 0 1727 732" role="img" aria-label="NORTHE"><use href="#northe-logo"/></svg></a>
     <nav class="nav" id="nav" aria-label="Principal">
-      <a class="link mono" href="#obvio">Qué auditamos</a>
+      <a class="link mono" href="#servicios">Servicios</a>
       <a class="link mono" href="#metodo">Método</a>
-      <a class="link mono" href="#rubros">Rubros</a>
-      <a class="link mono" href="#proyectos">Proyectos</a>
-      <a class="link mono" href="#auditorias">Auditorías</a>
+      <a class="link mono" href="#proyectos">Casos</a>
+      <a class="link mono" href="#herramientas">Herramientas</a>
       <a class="link mono" href="#preguntas">Preguntas</a>
       <a class="link mono" href="/blog/">Blog</a>
-      <a class="btn small" href="#auditoria-expres">Auditoría exprés</a>
+      <a class="btn small" href="#cotizador">Cotizar gratis</a>
     </nav>
     <div class="ctrl">
       <button type="button" class="icon-btn menu-btn" id="menu" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 9h14M2 13h14" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
@@ -559,24 +558,59 @@ html.js:not(.fx-on) .rv { opacity: 1; transform: none; transition: none; }
 <main id="inicio">
   <div class="wrap hero">
     <div class="hero-in">
-      <span class="eyebrow mono" style="--i:0">Estrategia y arquitectura de marca · Piura, norte del Perú</span>
-      <h1 style="--i:1">Consultoría de marca en Piura, con <em>acento del norte</em>.</h1>
-      <p class="lede" style="--i:2">NORTHE combina arquitectura de marca, inteligencia artificial y ciencias del comportamiento. Auditamos lo que hace que te elijan: tus números, tu identidad, tu cultura local y tu capacidad de atender la demanda. Los seguidores vienen después.</p>
-      <div class="ai-points" style="--i:3">
-        <div>
-          <span class="mono">GEO · Visibilidad en la IA</span>
-          <p>Preparamos tu marca para tener más posibilidades de aparecer en Google y en las respuestas de ChatGPT, Gemini y Perplexity.</p>
-        </div>
-        <div>
-          <span class="mono">IA en los procesos</span>
-          <p>Automatizamos con inteligencia artificial las tareas repetitivas del análisis y del marketing, y dejamos las decisiones de marca a personas.</p>
-        </div>
+      <span class="eyebrow mono" style="--i:0">Consultora de marca y marketing en Piura · norte del Perú</span>
+      <h1 style="--i:1">Diagnosticamos con números. <em>Ejecutamos el plan.</em></h1>
+      <p class="lede" style="--i:2">Pensamos como consultora y ejecutamos como agencia. Partimos de cuánto necesitas vender y, con eso claro, hacemos tu web, tu presencia en Google y tu marketing mes a mes. Siete años trabajando con negocios del norte del Perú.</p>
+      <style>
+        .goals{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 22px}
+        .goals a{display:inline-flex;flex-direction:column;gap:2px;background:#111;color:#fff;border-radius:22px;padding:14px 20px;text-decoration:none;border:1px solid #222;transition:border-color .2s,background .2s}
+        .goals a:hover,.goals a:focus-visible{border-color:#8052ff;background:#16112a}
+        .goals a b{font-weight:400;font-size:16px}
+        .goals a span{color:#9a9a9a;font-size:13px;font-weight:300}
+        .quick{display:flex;flex-wrap:wrap;gap:10px;align-items:center;max-width:640px}
+        .quick input,.quick select{flex:1 1 180px;min-width:0;background:#000;border:1px solid #333;border-radius:999px;color:#fff;font:300 15px Inter,system-ui,sans-serif;padding:13px 18px}
+        .quick input:focus,.quick select:focus{outline:none;border-color:#8052ff}
+        .quick .btn{flex:0 0 auto}
+        .quick-note{margin-top:10px}
+      </style>
+      <p class="mono muted" style="--i:3;margin:22px 0 0">¿Qué necesitas hoy?</p>
+      <div class="goals" style="--i:3">
+        <a href="#auditoria-expres" data-goal="diagnostico"><b>Saber qué me está fallando</b><span>Auditoría exprés gratis · 2 minutos</span></a>
+        <a href="#etapa-construccion" data-goal="web"><b>Una web que venda</b><span>Web, Google y marca</span></a>
+        <a href="#etapa-crecimiento" data-goal="marketing"><b>Que lleven mi marketing</b><span>Acompañamiento mensual integral</span></a>
       </div>
-      <div class="ctas" style="--i:4">
-        <a class="btn" href="#auditoria-expres">Hacer la auditoría exprés</a>
-        <a class="btn ghost" href="#metodo">Ver el método</a>
-      </div>
-      <p class="hero-note mono">Gratis · 2 minutos · puntaje sobre 100 · sin datos de contacto</p>
+      <form class="quick" id="quick" style="--i:4" onsubmit="return false">
+        <label style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap" for="q-nombre">Tu nombre o el de tu negocio</label>
+        <input id="q-nombre" type="text" autocomplete="name" placeholder="Tu nombre o tu negocio">
+        <label style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap" for="q-necesidad">Qué necesitas</label>
+        <select id="q-necesidad">
+          <option>Quiero saber qué me está fallando</option>
+          <option>Quiero una página web</option>
+          <option>Quiero aparecer en Google</option>
+          <option>Quiero que lleven mi marketing</option>
+          <option>Quiero publicidad en Facebook e Instagram</option>
+          <option>Otra cosa</option>
+        </select>
+        <a class="btn" id="q-wa" href="https://wa.me/51960190963" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      </form>
+      <p class="hero-note mono quick-note">Te respondemos por WhatsApp · Sin compromiso · Precios publicados</p>
+      <script>
+      (function () {
+        var f = document.getElementById("quick"), a = document.getElementById("q-wa");
+        function upd() {
+          var n = document.getElementById("q-nombre").value.trim(), q = document.getElementById("q-necesidad").value;
+          var m = "Hola NORTHE, " + (n ? "soy " + n + ". " : "") + q.charAt(0).toLowerCase() + q.slice(1) + ".";
+          var o = window.northeOrigen ? window.northeOrigen() : "";
+          if (o) m += " (Llegué desde " + o + ".)";
+          a.href = "https://wa.me/51960190963?text=" + encodeURIComponent(m);
+        }
+        f.addEventListener("input", upd); f.addEventListener("change", upd); upd();
+        a.addEventListener("click", function () { upd(); if (window.northeTrack) window.northeTrack("hero_whatsapp", { necesidad: document.getElementById("q-necesidad").value }); });
+        document.querySelectorAll(".goals a").forEach(function (g) {
+          g.addEventListener("click", function () { if (window.northeTrack) window.northeTrack("hero_objetivo", { objetivo: g.getAttribute("data-goal") }); });
+        });
+      })();
+      </script>
     </div>
     <div>
       <canvas class="constellation" id="constellation" role="img" aria-label="Constelación de pequeños triángulos de colores que forma la letra N de NORTHE; uno de ellos es distinto a los demás"></canvas>
@@ -621,6 +655,92 @@ html.js:not(.fx-on) .rv { opacity: 1; transform: none; transition: none; }
         <div class="lbl r down" style="--i:4"><b>Trujillo</b><span class="mono">8°07′ S</span></div>
       </div>
       <p class="axis-cap mono">Esquema por latitud sur. Cada marca es un grado. No está a escala geográfica.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="servicios" aria-labelledby="servicios-t">
+    <style>
+      .stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+      @media (max-width:960px){.stages{grid-template-columns:1fr}}
+      .stage{background:#111;border-radius:28px;padding:28px 26px;display:flex;flex-direction:column;gap:12px;scroll-margin-top:96px}
+      .stage .n{font:600 13px/1 Inter,system-ui,sans-serif;letter-spacing:.12em;color:#8052ff;text-transform:uppercase}
+      .stage h3{margin:0;font-size:26px;letter-spacing:-.02em;font-weight:400}
+      .stage .q{color:#bdbdbd;font-weight:300;margin:0}
+      .stage ul{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:8px}
+      .stage li a{color:#fff;text-decoration:none;border-bottom:1px solid #333}
+      .stage li a:hover{border-color:#8052ff}
+      .stage .price{margin-top:auto;padding-top:14px;border-top:1px solid #222;color:#9a9a9a;font-size:14px}
+      .stage .price b{color:#fff;font-weight:400}
+      .arrow{display:flex;justify-content:center;color:#555;margin:6px 0}
+    </style>
+    <div class="wrap">
+      <div class="sec-head" data-rv>
+        <span class="mono">Servicios · Pensamos como consultora, ejecutamos como agencia</span>
+        <h2 id="servicios-t">Tres etapas: diagnóstico, construcción y crecimiento.</h2>
+        <p>Empiezas donde estás. La mayoría de clientes entra por el diagnóstico; si ya sabes lo que necesitas, empezamos directo por la web o por el marketing mensual.</p>
+      </div>
+      <div class="stages" data-stagger>
+        <div class="stage" id="etapa-diagnostico">
+          <span class="n">Etapa 1 · Diagnóstico</span>
+          <h3>¿Qué te está fallando y qué haces primero?</h3>
+          <p class="q">Partimos de tus números: cuánto necesitas vender, cuántos clientes son y dónde se pierden.</p>
+          <ul>
+            <li><a href="#auditoria-expres">Auditoría exprés (gratis)</a></li>
+            <li><a href="#auditorias">Auditoría Esencial y Completa</a></li>
+            <li><a href="/consultoria-de-marca-piura/">Consultoría de marca</a></li>
+            <li><a href="/herramientas/calculadora-de-clientes/">Calculadora de clientes</a></li>
+          </ul>
+          <p class="price"><b>Desde S/ 0.</b> Auditoría Esencial S/ 450 + IGV (precio de lanzamiento).</p>
+        </div>
+        <div class="stage" id="etapa-construccion">
+          <span class="n">Etapa 2 · Construcción</span>
+          <h3>Las bases para vender</h3>
+          <p class="q">Una web clara y rápida, tu ficha de Google en orden y una marca que dice lo mismo en todos lados.</p>
+          <ul>
+            <li><a href="/diseno-web-piura/">Diseño de páginas web</a></li>
+            <li><a href="/seo-piura/">SEO local y Perfil de Google</a></li>
+            <li><a href="/consultoria-de-marca-piura/">Identidad, voz y mensajes de marca</a></li>
+          </ul>
+          <p class="price"><b>Por proyecto</b>, cotizado según el alcance.</p>
+        </div>
+        <div class="stage" id="etapa-crecimiento">
+          <span class="n">Etapa 3 · Crecimiento</span>
+          <h3>Tu marketing, mes a mes</h3>
+          <p class="q">Llevamos tu marketing con un plan y lo medimos en conversaciones y ventas, no en likes.</p>
+          <ul>
+            <li><a href="/marketing-digital-piura/">Acompañamiento mensual integral</a></li>
+            <li><a href="/meta-ads-piura/">Publicidad en Facebook e Instagram</a></li>
+            <li><a href="/seo-piura/">SEO y contenido continuo</a></li>
+            <li><a href="#panel">Panel de números y reporte mensual</a></li>
+          </ul>
+          <p class="price"><b>Mensual</b>, cotizado según tu negocio y tus canales.</p>
+        </div>
+      </div>
+      <div class="ctas" style="margin-top:32px"><a class="btn" href="#cotizador">Cotizar gratis</a><a class="btn ghost" href="#metodo">Ver cómo trabajamos</a></div>
+    </div>
+  </section>
+
+  <section class="sec" id="herramientas" aria-labelledby="herr-t">
+    <div class="wrap">
+      <div class="sec-head" data-rv>
+        <span class="mono">Herramientas gratuitas</span>
+        <h2 id="herr-t">Empieza solo, con tus números.</h2>
+        <p>Dos herramientas para entender tu negocio antes de hablar con nadie. Sin registro y en minutos.</p>
+      </div>
+      <div class="rubros" data-stagger>
+        <div class="rubro">
+          <span class="mono cat">Diagnóstico · 2 minutos</span>
+          <h3>Auditoría exprés</h3>
+          <p>Siete preguntas y un puntaje sobre 100 con los puntos débiles de tu marca: identidad, lenguaje local, retención y capacidad de atender.</p>
+          <div class="go-row"><a class="go" href="#auditoria-expres">Hacer la auditoría →</a></div>
+        </div>
+        <div class="rubro">
+          <span class="mono cat">Números · 1 minuto</span>
+          <h3>Calculadora de clientes</h3>
+          <p>Escribe tu meta de ventas y descubre cuántos clientes, conversaciones y visitas necesitas al mes, y si te alcanza el tiempo para atenderlos.</p>
+          <div class="go-row"><a class="go" href="/herramientas/calculadora-de-clientes/">Usar la calculadora →</a></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1094,6 +1214,9 @@ html.js:not(.fx-on) .rv { opacity: 1; transform: none; transition: none; }
             <label class="opt"><input type="checkbox" value="Auditoría Esencial"><span>Auditoría Esencial <small>S/ 450 + IGV</small></span></label>
             <label class="opt"><input type="checkbox" value="Auditoría Completa"><span>Auditoría Completa <small>se cotiza</small></span></label>
             <label class="opt"><input type="checkbox" value="Acompañamiento mensual"><span>Acompañamiento <small>se cotiza</small></span></label>
+            <label class="opt"><input type="checkbox" value="Página web"><span>Página web <small>se cotiza</small></span></label>
+            <label class="opt"><input type="checkbox" value="SEO local y Perfil de Google"><span>SEO local <small>se cotiza</small></span></label>
+            <label class="opt"><input type="checkbox" value="Publicidad en Facebook e Instagram"><span>Meta Ads <small>se cotiza</small></span></label>
           </div>
           <p class="cerr" role="alert"></p>
           <div class="cact"><button type="button" class="btn" data-go="2">Siguiente</button></div>
@@ -1163,7 +1286,7 @@ html.js:not(.fx-on) .rv { opacity: 1; transform: none; transition: none; }
         var p = [];
         if (list.indexOf("Auditoría Esencial") > -1) p.push("Auditoría Esencial: S/ 450 + IGV (precio de lanzamiento para los primeros 5 clientes; luego S/ 600 + IGV).");
         if (list.indexOf("Auditoría exprés (gratis)") > -1) p.push("Auditoría exprés: S/ 0.");
-        if (list.indexOf("Auditoría Completa") > -1 || list.indexOf("Acompañamiento mensual") > -1) p.push("Completa y Acompañamiento se cotizan según el tamaño del negocio.");
+        if (list.some(function (x) { return ["Auditoría Completa", "Acompañamiento mensual", "Página web", "SEO local y Perfil de Google", "Publicidad en Facebook e Instagram"].indexOf(x) > -1; })) p.push("La Auditoría Completa, la web, el SEO, Meta Ads y el acompañamiento se cotizan según el tamaño del negocio y el alcance.");
         document.getElementById("c-precio").textContent = p.join(" ");
         update();
       }
